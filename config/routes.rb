@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  get 'landings/index' => 'landings#index'
+
+
   get 'chapters/index'
 
   get 'chapters/show'
