@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'chapters/index'
 
   get 'chapters/show'
@@ -28,7 +30,7 @@ Rails.application.routes.draw do
   # get 'courses/destroy'
 
   resources :courses do
- resources :chapters, only: [:create]
+    resources :chapters, only: [:create]
   end
 
 
