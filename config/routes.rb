@@ -1,8 +1,48 @@
 Rails.application.routes.draw do
+
+
+  get 'landings/index' => 'landings#index'
+
+
+  get 'chapters/index'
+
+  get 'chapters/show'
+
+  get 'chapters/new'
+
+  get 'chapters/create'
+
+  get 'chapters/edit'
+
+  get 'chapters/update'
+
+  get 'chapters/destroy'
+
+  # get 'courses/index'
+
+  # get 'courses/show'
+
+  # get 'courses/new'
+
+  # get 'courses/create'
+
+  # get 'courses/edit'
+
+  # get 'courses/update'
+
+  # get 'courses/destroy'
+
+  resources :courses do
+    resources :chapters, only: [:create]
+  end
+
+
+
+
   devise_for :users
   get 'pages/about'
 
-  root 'pages#about'
+  root 'courses#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

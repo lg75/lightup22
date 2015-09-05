@@ -1,0 +1,2 @@
+      invoke  active_record
+    conflict    db/migrate/20150905140657_add_omniauth_to_users.rb
